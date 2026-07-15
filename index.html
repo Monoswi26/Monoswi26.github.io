@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monoswi Chakraborty — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1b2430; --sub:#475569; --muted:#64748b; --border:#e5e7eb; --card:#f8fafc; --link:#2563eb;
+    }
+    [data-theme="dark"]{
+      --bg:#0b1220; --text:#e6edf6; --sub:#c8d1dc; --muted:#9aa3b2; --border:#1f2a44; --card:#0f172a; --link:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+
+    header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .title h1{margin:0;font-size:clamp(26px,4vw,36px)}
+    .title .subtitle{margin:6px 0 0;color:var(--sub);font-weight:500}
+    .contact{margin-top:8px;color:var(--muted);font-size:14px}
+    .contact a{word-break:break-all}
+
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    button, .btn{border:1px solid var(--border);background:var(--card);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:500}
+    button:hover, .btn:hover{filter:brightness(0.98)}
+
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+
+    section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+    section h2{margin:0 0 8px;font-size:20px}
+    h3{margin:10px 0 0;font-size:16px}
+    .item{margin-top:10px}
+    .inst{font-style:italic;color:var(--sub)}
+    .date{float:right;color:var(--muted);font-size:13px}
+    ul{margin:6px 0 0 18px}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* Print styles */
+    @media print{
+      .btns{display:none !important}
+      body{background:#fff;color:#000}
+      section{break-inside:avoid}
+      .page{padding:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title">
+        <h1>Monoswi Chakraborty <span style="font-size:14px;color:var(--muted);font-weight:600">(He/Him)</span></h1>
+        <div class="subtitle">Genetics, Genomics & Bioinformatics · University of California, Riverside</div>
+        <div class="contact">
+          📞 +1 (951)-538-1210 · ✉️ mchak015(at)ucr(dot)edu · 📍 3429 Canyon Crest Dr, Riverside-92507, CA<br/>
+          🔗 <a href="https://profiles.ucr.edu/monoswi.chakraborty" target="_blank" rel="noopener">profiles.ucr.edu/monoswi.chakraborty</a>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="button" onclick="window.print()">Print / Save PDF</button>
+        <button type="button" id="themeBtn" aria-pressed="false" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section>
+          <h2>Professional Summary</h2>
+          <p>Monoswi is a first-year graduate student in the Genetics, Genomics, and Bioinformatics (GGB) program at UC Riverside, bringing a robust multidisciplinary background in systems biology and bioinformatics. His PhD pursuits are centered on synthetic genomics and genetic engineering, aiming to apply these skills to pioneer novel solutions at the confluence of human health and environment.</p>
+          <p><strong>Research Interests:</strong> Synthetic Genomics, CRISPR/Cas, Multi-Omics, Systems Biology, Bioinformatics</p>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="item">
+            <h3>PhD in Genetics, Genomics and Bioinformatics <span class="date">Fall 2024 – Present</span></h3>
+            <div class="inst">University of California, Riverside, USA</div>
+            <p><strong>Thesis:</strong> Integrative GWAS and CRISPR Base Editing for Functional Population Genomics of <em>K. marxianus</em></p>
+            <p><strong>Supervisors:</strong> Prof. Ian Wheeldon; Prof. Thomas Girke; Prof. Jason Stajich</p>
+            <p><strong>Skills:</strong> GWAS analyses, R/Python/Git, Next-Gen Sequencing, genomics</p>
+            <p><strong>Rotation Project:</strong> Understanding the design principles of transcription regulation in viruses. <em>Supervisor:</em> Dr. Sonali Chaturvedi; skills: Genetic circuits, lentiviral transduction, ML, scRNA‑seq, mammalian & organoid/iPSC culture</p>
+          </div>
+          <div class="item">
+            <h3>M.Sc in Biotechnology and Bioinformatics <span class="date">Aug 2020 – Oct 2022</span></h3>
+            <div class="inst">Institute of Bioinformatics and Applied Biotechnology (IBAB), Bengaluru – India <span style="color:var(--muted)">[Distinction]</span></div>
+            <p><strong>Master’s Thesis:</strong> Discovery and adaptation of high-fidelity ultracompact CRISPR/Cas13 RNA‑targeting systems to malarial parasites for precision transcriptome engineering.</p>
+            <p><strong>Supervisor:</strong> Dr. Shruthi S. Vembar</p>
+            <p><strong>Skills:</strong> Molecular cloning, phylogenetics, sequence network modeling, Linux shell, HMMs, CRISPR screens</p>
+          </div>
+          <div class="item">
+            <h3>B.Sc in Biotechnology <span class="date">Aug 2017 – Oct 2020</span></h3>
+            <div class="inst">Cotton University (Former Cotton College), Guwahati, Assam – India <span style="color:var(--muted)">[Rank: 1st, Gold Medalist]</span></div>
+            <p><strong>Bachelor’s Thesis:</strong> In‑silico screening of SARS‑CoV‑2 spike and M<small>PRO</small> inhibitors for therapeutic lead identification. <span style="color:var(--muted)">[Best UG Research Award]</span></p>
+            <p><strong>Supervisors:</strong> Dr. Arabinda Ghosh; Dr. Purabi Deka Bose</p>
+            <p><strong>Skills:</strong> Molecular dynamics, cheminformatics, QSAR, pharmacophore modeling, ANN</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Research Experience</h2>
+          <div class="item">
+            <h3>Research Assistant <span class="date">Jan 2023 – May 2024</span></h3>
+            <div class="inst">Montana State University, Bozeman, MT – USA</div>
+            <p><strong>Research:</strong> Role of reverse transcriptase in type III CRISPR adaptation. <strong>Advisor:</strong> Prof. Blake Wiedenheft</p>
+            <p><strong>Skills:</strong> Protein purification & characterization, molecular cloning, Cryo‑EM, mentoring</p>
+          </div>
+          <div class="item">
+            <h3>Bio‑IT Project Assistant <span class="date">Aug 2022 – Jan 2023</span></h3>
+            <div class="inst">IBAB Bengaluru · St. John’s Medical College & Research Institute, India</div>
+            <p><strong>Research:</strong> Transcriptomic signatures of EVs/microparticles from Idiopathic Thrombocytopenic Purpura patient samples. <strong>Advisors:</strong> Dr. Shruthi S. Vembar & Prof. Cecil Ross</p>
+            <p><strong>Skills:</strong> NGS, RNA‑seq data analysis, visualization, bash, Python, R</p>
+          </div>
+          <div class="item">
+            <h3>Visiting Student Researcher <span class="date">Jun 2021 – Jul 2022</span></h3>
+            <div class="inst">National Center for Biological Sciences (TIFR‑NCBS), Bengaluru, India</div>
+            <p><strong>Research:</strong> Molecular & epigenetic signaling of RLKs during wound healing and immunity in rice. <strong>Advisor:</strong> Prof. P. V. Shivaprasad</p>
+            <p><strong>Skills:</strong> Structural bioinformatics, epigenomics, phylogenetics, manuscript preparation</p>
+          </div>
+          <div class="item">
+            <h3>Public Health & Policy Intern <span class="date">May 2021 – Jan 2021</span></h3>
+            <div class="inst">IBAB Bengaluru · Indian Institute of Science (IISc), India</div>
+            <p><strong>Research:</strong> Clinical trials & orphan drugs data analysis for rare diseases in India. <strong>Advisors:</strong> Prof. Gayatri Saberwal & Dr. Mohua Choudhury</p>
+            <p><strong>Skills:</strong> CTRs, health policy analytics, Python web scraping, manuscript writing</p>
+          </div>
+          <div class="item">
+            <h3>IASc‑INSA‑NASI Summer Fellow <span class="date">Jun 2019 – Oct 2019</span></h3>
+            <div class="inst">International Center for Genetic Engineering & Biotechnology (ICGEB), New Delhi</div>
+            <p><strong>Research:</strong> Design and functional analysis of miRNA‑targeted reporter constructs via <em>in planta</em> assays. <strong>Advisor:</strong> Dr. Neeti Sanan‑Mishra</p>
+            <p><strong>Skills:</strong> miRNA isolation, cloning, plant tissue culture, agroinfiltration, manuscript writing</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Publications</h2>
+          <ol>
+            <li>Harshith, C. Y., Pal, A., <strong>Chakraborty, M.</strong>, Nair, A., Raju, S., & Shivaprasad, P. V. (2024). Wound‑induced small‑peptide‑mediated signaling cascade, regulated by OsPSKR, dictates balance between growth and defense in rice. <em>Cell Reports</em>, 43(7).</li>
+            <li><strong>Chakraborty, M.</strong>, Choudhury, M. C., Chakraborty, I., & Saberwal, G. (2022). Rare disease patients in India are rarely involved in international orphan drug trials. <em>PLOS Global Public Health</em>, 2(8).</li>
+            <li>Ghosh, A.*, <strong>Chakraborty, M.*</strong>, Chandra, A., et al. (2021). SAR & MD of withaferin‑A fragment derivatives against SARS‑CoV‑2 M<small>pro</small>. <em>Journal of Molecular Modeling</em>, 27(97). <span style="color:var(--muted)">[*Co‑first authors]</span></li>
+            <li>Kharbikar, L., Konwarh, R., <strong>Chakraborty, M.</strong>, Nandanwar, S., Marathe, A., Yele, Y., ... & Singh, A. P. (2023). 3Bs of CRISPR‑Cas mediated genome editing in plants: exploring the basics, bioinformatics and biosafety landscape. <em>Physiology and Molecular Biology of Plants</em>, 1(26). <span style="color:var(--muted)">[Review]</span></li>
+            <li>Bharadwaj, K. K., <strong>Chakraborty, M.*</strong>, et al. (2022). Role of Gold Nanoparticles Against MDR Bacteria. In: <em>Emerging Modalities in Mitigation of Antimicrobial Resistance</em>. Springer, Cham. <span style="color:var(--muted)">[Book chapter]</span></li>
+            <li><strong>Chakraborty, M.</strong> (2020). miR‑targeted reporter gene constructs using <em>in planta</em> assay. In: <em>Proceedings of ICDD 2020</em>.</li>
+            <li>Kharbikar, L., Mishra, R., Nandanwar, S., <strong>Chakraborty, M.</strong>, et al. (2025). <em>Arthrobacter</em> sp. GDB: a glyphosate‑degrading actinobacterium from jute rhizosphere. <span style="color:var(--muted)">[Preprint]</span></li>
+          </ol>
+        </section>
+      </main>
+
+      <aside>
+        <section>
+          <h2>Teaching Experience</h2>
+          <ul>
+            <li>BIOL 05A (Intro to Cell & Molecular Biology) — Discussions, quizzes & lectures, Fall 2025, UC Riverside</li>
+            <li>MCBL123 (Comparative Virology) — Discussions, Spring 2025, UC Riverside</li>
+            <li>BIOM360 (General Microbiology) — Discussions & labs, Spring 2024, MSU</li>
+            <li>BIOM457 (Research Methods in Immunology) — Labs & discussions, Fall 2023, MSU</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fellowships & Awards</h2>
+          <ul>
+            <li>Dean’s Distinguished Fellowship, University of California, Riverside — <span class="date">Fall 2024</span></li>
+            <li>National GATE Fellowships (Biotech | Life Sciences) — <span class="date">Mar 2022</span></li>
+            <li>University Gold Medal, Merit Rank‑1, Cotton University — <span class="date">Oct 2020</span></li>
+            <li>IASc‑INSA‑NASI Summer Fellowship — <span class="date">Jun 2019</span></li>
+            <li>Anandaram Baruah Award, Distinction Holder, SEBA Assam — <span class="date">May 2014</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Academic Service & Mentoring</h2>
+          <ul>
+            <li>Academic Affairs Officer, BcMB‑GSA, UC Riverside — <span class="date">2025–26</span></li>
+            <li>Peer Reviewer, <em>PLOS ONE</em> — <span class="date">2023/24/25</span></li>
+            <li>Educator, Career Guidance & Mentorship Program (CGMP), Biotechnika, India — <span class="date">2023/2024</span></li>
+            <li>Speaker & Panelist — CRISPR/Cas biology & genetic engineering workshop, Biotechnika, India — <span class="date">Jun 2023</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Extracurricular</h2>
+          <ul>
+            <li>Social Media Manager, Indian Student Association – Bozeman, USA — <span class="date">2023/24</span></li>
+            <li>Managed IBAB Science & Social Media Team (Quora, YouTube) — <span class="date">2020/22</span></li>
+            <li>Visharad (Graduate) in Indian Classical Music, Bangiya Sangeet Parishad — <span class="date">2013</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© <span id="y"></span> Monoswi Chakraborty · Last updated: <span id="lu"></span></p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme persistence & toggle
+    const root = document.documentElement;
+    function setTheme(t){
+      if(t==='dark'){root.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); themeBtn.textContent='☀️ Light Mode'; themeBtn.setAttribute('aria-pressed','true');}
+      else {root.removeAttribute('data-theme'); localStorage.setItem('theme','light'); themeBtn.textContent='🌙 Dark Mode'; themeBtn.setAttribute('aria-pressed','false');}
+    }
+    const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
+    const themeBtn = document.getElementById('themeBtn');
+    setTheme(saved);
+    themeBtn.addEventListener('click',()=> setTheme(root.getAttribute('data-theme')==='dark' ? 'light':'dark'));
+
+    // Footer dates
+    const d=new Date();
+    document.getElementById('y').textContent=d.getFullYear();
+    document.getElementById('lu').textContent=d.toLocaleDateString();
+  </script>
+</body>
+</html>
